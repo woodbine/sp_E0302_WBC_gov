@@ -96,8 +96,7 @@ soup = BeautifulSoup(html, 'lxml')
 
 #### SCRAPE DATA
 
-block = soup.find('div', attrs = {'class':'row'})
-links = block.findAll('a')
+links = soup.findAll('a')
 for link in links:
     if '20' in link.text:
         url = 'http://info.westberks.gov.uk/' + link['href']
